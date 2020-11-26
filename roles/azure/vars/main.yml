@@ -1,0 +1,17 @@
+---
+    # vm_size: "Standard_B1ls"
+    # location: "East US"
+    # vm_name: "Test01"
+    # resource_group: "sakar_group"
+    # admin_username: "Nikhil"
+    # admin_password: "Nick!@#$%^&*()123again"
+    # vm_offer: "CentOS"
+    # vm_pub: "OpenLogic"
+    # vm_sku: "7.4"
+    # virtual_network_name: sol-vnet
+    # subnet_name: default
+    # subscription_id: 0ec4d0cd-71a3-4b41-969f-5ca37043c158
+    # tenant: 7f545c08-dc04-41f3-9cc3-b8251a63a0de
+    # client_id: b3b70a17-e81e-4632-afa3-661e0b9fb67c
+    # secret: S_-MD353.Z1-g_z7AxxYA6_y1X8WKHn_Te
+    

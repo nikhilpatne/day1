@@ -1,0 +1,312 @@
+    4.512 INFO     Updating inventory 45: Vcenter
+    5.809 DEBUG    Using base command: python /usr/bin/ansible-inventory -i /var/lib/awx/venv/awx/lib64/python3.6/site-packages/awx/plugins/inventory/vmware_inventory.py --playbook-dir /var/lib/awx/venv/awx/lib64/python3.6/site-packages/awx/plugins/inventory -vvvvv
+    5.810 INFO     Reading Ansible inventory source: /var/lib/awx/venv/awx/lib64/python3.6/site-packages/awx/plugins/inventory/vmware_inventory.py
+    5.813 INFO     Using VIRTUAL_ENV: /var/lib/awx/venv/ansible
+    5.813 INFO     Using PATH: /var/lib/awx/venv/ansible/bin:/var/lib/awx/venv/awx/bin:/opt/rh/rh-python36/root/usr/bin:/var/lib/awx/venv/awx/bin:/var/lib/awx/venv/awx/bin:/opt/rh/rh-python36/root/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
+    5.813 INFO     Using PYTHONPATH: /var/lib/awx/venv/ansible/lib/python2.7/site-packages:
+    5.825 DEBUG    Using private credential data in '/tmp/awx_410_avhlspu2'.
+    5.828 DEBUG    Using fresh temporary directory '/tmp/awx_proot_bgb9o_an' for isolation.
+    5.828 DEBUG    Running from `/var/lib/awx/venv/awx/lib/python3.6/site-packages/awx/plugins/inventory` working directory.
+   77.616 ERROR    ansible-inventory 2.8.2
+   77.623 ERROR      config file = /etc/ansible/ansible.cfg
+   77.624 ERROR      configured module search path = [u'/var/lib/awx/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+   77.624 ERROR      ansible python module location = /usr/lib/python2.7/site-packages/ansible
+   77.624 ERROR      executable location = /usr/bin/ansible-inventory
+   77.624 ERROR      python version = 2.7.5 (default, Aug  7 2019, 00:51:29) [GCC 4.8.5 20150623 (Red Hat 4.8.5-39)]
+   77.624 ERROR    Using /etc/ansible/ansible.cfg as config file
+   77.625 ERROR    setting up inventory plugins
+   77.625 ERROR    Parsed /var/lib/awx/venv/awx/lib64/python3.6/site-packages/awx/plugins/inventory/vmware_inventory.py inventory source with script plugin
+   77.648 DEBUG    Finished loading from source: /var/lib/awx/venv/awx/lib64/python3.6/site-packages/awx/plugins/inventory/vmware_inventory.py
+   77.653 INFO     Processing JSON output...
+   77.660 DEBUG    Loaded group: all
+   77.662 DEBUG    Loaded group: None
+   77.663 DEBUG    Adding child group None to parent all
+   77.664 DEBUG    Loaded host: Openvas Scanner_423f4439-9f1d-b66a-daa4-0627dbd8176e
+   77.665 DEBUG    Adding host Openvas Scanner_423f4439-9f1d-b66a-daa4-0627dbd8176e to group None
+   77.665 DEBUG    Loaded host: rhev_host43_423f08fa-dfa4-3105-e97f-401a63396dec
+   77.665 DEBUG    Adding host rhev_host43_423f08fa-dfa4-3105-e97f-401a63396dec to group None
+   77.665 DEBUG    Loaded host: rhvhost1_423f22e9-3ef5-0fc1-bd78-20367ce457b2
+   77.666 DEBUG    Adding host rhvhost1_423f22e9-3ef5-0fc1-bd78-20367ce457b2 to group None
+   77.666 DEBUG    Loaded host: rhvhost2_423fd4cd-7298-c0e3-0fd7-8bbbee252ca2
+   77.666 DEBUG    Adding host rhvhost2_423fd4cd-7298-c0e3-0fd7-8bbbee252ca2 to group None
+   77.666 DEBUG    Adding child group None to parent all
+   77.666 DEBUG    Adding child group None to parent all
+   77.666 DEBUG    Loaded group: centos6_64Guest
+   77.666 DEBUG    Adding child group centos6_64Guest to parent all
+   77.667 DEBUG    Loaded group: centos7_64Guest
+   77.667 DEBUG    Adding child group centos7_64Guest to parent all
+   77.667 DEBUG    Loaded group: fedora64Guest
+   77.667 DEBUG    Adding child group fedora64Guest to parent all
+   77.667 DEBUG    Loaded group: guests
+   77.667 DEBUG    Adding child group guests to parent all
+   77.667 DEBUG    Loaded group: rhel7_64Guest
+   77.667 DEBUG    Adding child group rhel7_64Guest to parent all
+   77.667 DEBUG    Loaded group: ubuntu64Guest
+   77.668 DEBUG    Adding child group ubuntu64Guest to parent all
+   77.668 DEBUG    Loaded host: AnsibleTower_423f0a7e-12dd-28f8-80ab-72a3ba43157e
+   77.668 DEBUG    Adding host AnsibleTower_423f0a7e-12dd-28f8-80ab-72a3ba43157e to group centos6_64Guest
+   77.668 DEBUG    Adding child group centos6_64Guest to parent all
+   77.668 DEBUG    Loaded host: AWX_423fcf64-aec1-b76d-2f91-f98a2a2f9a5b
+   77.668 DEBUG    Adding host AWX_423fcf64-aec1-b76d-2f91-f98a2a2f9a5b to group centos7_64Guest
+   77.669 DEBUG    Loaded host: Ansible-Tower-3.7_423f99ef-913c-1db6-5b69-aaf0df03df64
+   77.669 DEBUG    Adding host Ansible-Tower-3.7_423f99ef-913c-1db6-5b69-aaf0df03df64 to group centos7_64Guest
+   77.669 DEBUG    Loaded host: NikhilAnsibleTower_423f62af-eaa6-301a-ff71-d8c79cb7b204
+   77.669 DEBUG    Adding host NikhilAnsibleTower_423f62af-eaa6-301a-ff71-d8c79cb7b204 to group centos7_64Guest
+   77.669 DEBUG    Loaded host: load-balancer_423f9cc0-54ab-10c6-f522-a9df2ccf84c9
+   77.670 DEBUG    Adding host load-balancer_423f9cc0-54ab-10c6-f522-a9df2ccf84c9 to group centos7_64Guest
+   77.670 DEBUG    Loaded host: master-node-1_423fe0da-5b0c-80d5-70ef-1522a7eb7919
+   77.670 DEBUG    Adding host master-node-1_423fe0da-5b0c-80d5-70ef-1522a7eb7919 to group centos7_64Guest
+   77.670 DEBUG    Loaded host: master-node-2_423f1eec-88e1-84b9-3cff-50f5c0c6512b
+   77.671 DEBUG    Adding host master-node-2_423f1eec-88e1-84b9-3cff-50f5c0c6512b to group centos7_64Guest
+   77.671 DEBUG    Loaded host: master-node-3_423f8da1-b251-a8cf-cf84-572da89e265c
+   77.671 DEBUG    Adding host master-node-3_423f8da1-b251-a8cf-cf84-572da89e265c to group centos7_64Guest
+   77.671 DEBUG    Loaded host: master-node-4_423ff207-f6d0-13fd-d54f-889ad6e8090d
+   77.671 DEBUG    Adding host master-node-4_423ff207-f6d0-13fd-d54f-889ad6e8090d to group centos7_64Guest
+   77.672 DEBUG    Loaded host: master_423f98ea-f9f0-c31b-a6ce-535bc3f69642
+   77.672 DEBUG    Adding host master_423f98ea-f9f0-c31b-a6ce-535bc3f69642 to group centos7_64Guest
+   77.672 DEBUG    Loaded host: node1_423f250c-9b6e-b190-ba2f-660ccec92dfa
+   77.672 DEBUG    Adding host node1_423f250c-9b6e-b190-ba2f-660ccec92dfa to group centos7_64Guest
+   77.673 DEBUG    Loaded host: node2_423f3cc8-3fba-e049-4fca-b4211d0c3c92
+   77.673 DEBUG    Adding host node2_423f3cc8-3fba-e049-4fca-b4211d0c3c92 to group centos7_64Guest
+   77.673 DEBUG    Loaded host: pm_server_423faf73-52ef-8506-69ec-5759b05afe8b
+   77.673 DEBUG    Adding host pm_server_423faf73-52ef-8506-69ec-5759b05afe8b to group centos7_64Guest
+   77.674 DEBUG    Loaded host: prashansa_static_423f4fd7-ac54-7368-3b18-48521806a992
+   77.674 DEBUG    Adding host prashansa_static_423f4fd7-ac54-7368-3b18-48521806a992 to group centos7_64Guest
+   77.675 DEBUG    Loaded host: worker-node-1_423fdb83-fd1f-27a3-95d9-035881840005
+   77.675 DEBUG    Adding host worker-node-1_423fdb83-fd1f-27a3-95d9-035881840005 to group centos7_64Guest
+   77.675 DEBUG    Adding child group centos7_64Guest to parent all
+   77.675 DEBUG    Loaded host: Infoblox_423f3b85-e312-8b6b-2aef-9e8a1877e996
+   77.676 DEBUG    Adding host Infoblox_423f3b85-e312-8b6b-2aef-9e8a1877e996 to group fedora64Guest
+   77.676 DEBUG    Adding child group fedora64Guest to parent all
+   77.676 DEBUG    Adding host AWX_423fcf64-aec1-b76d-2f91-f98a2a2f9a5b to group guests
+   77.676 DEBUG    Adding host Ansible-Tower-3.7_423f99ef-913c-1db6-5b69-aaf0df03df64 to group guests
+   77.676 DEBUG    Loaded host: AnsibleAWX_423f2900-410f-3ce0-34c5-e7f9d71332c5
+   77.676 DEBUG    Adding host AnsibleAWX_423f2900-410f-3ce0-34c5-e7f9d71332c5 to group guests
+   77.677 DEBUG    Adding host AnsibleTower_423f0a7e-12dd-28f8-80ab-72a3ba43157e to group guests
+   77.677 DEBUG    Loaded host: Controller_423ffae3-efc6-c9f3-c603-d894dd861561
+   77.677 DEBUG    Adding host Controller_423ffae3-efc6-c9f3-c603-d894dd861561 to group guests
+   77.677 DEBUG    Adding host Infoblox_423f3b85-e312-8b6b-2aef-9e8a1877e996 to group guests
+   77.678 DEBUG    Loaded host: KVM Server_423f7323-a5e7-710e-e3fd-b7f8e0ef0d09
+   77.678 DEBUG    Adding host KVM Server_423f7323-a5e7-710e-e3fd-b7f8e0ef0d09 to group guests
+   77.678 DEBUG    Adding host NikhilAnsibleTower_423f62af-eaa6-301a-ff71-d8c79cb7b204 to group guests
+   77.678 DEBUG    Adding host Openvas Scanner_423f4439-9f1d-b66a-daa4-0627dbd8176e to group guests
+   77.679 DEBUG    Loaded host: bastion_423f8616-3c53-8bda-f903-4b2d04510170
+   77.679 DEBUG    Adding host bastion_423f8616-3c53-8bda-f903-4b2d04510170 to group guests
+   77.679 DEBUG    Loaded host: cloudify-vm_423fece3-0b55-487a-59c3-4447636f9dc2
+   77.679 DEBUG    Adding host cloudify-vm_423fece3-0b55-487a-59c3-4447636f9dc2 to group guests
+   77.679 DEBUG    Loaded host: cloudserver01_423f7ad4-d8ae-c229-f47a-74671b5960c0
+   77.679 DEBUG    Adding host cloudserver01_423f7ad4-d8ae-c229-f47a-74671b5960c0 to group guests
+   77.679 DEBUG    Loaded host: cloudserver03_423f4cd8-c997-f832-55de-f5bb969b15e0
+   77.680 DEBUG    Adding host cloudserver03_423f4cd8-c997-f832-55de-f5bb969b15e0 to group guests
+   77.680 DEBUG    Loaded host: gslcloudform_423fef2e-3847-af12-02a8-a62a0a95bf1b
+   77.680 DEBUG    Adding host gslcloudform_423fef2e-3847-af12-02a8-a62a0a95bf1b to group guests
+   77.680 DEBUG    Loaded host: haproxy_423fdcaa-4c28-6f15-ebd1-0663804c99cb
+   77.680 DEBUG    Adding host haproxy_423fdcaa-4c28-6f15-ebd1-0663804c99cb to group guests
+   77.681 DEBUG    Adding host load-balancer_423f9cc0-54ab-10c6-f522-a9df2ccf84c9 to group guests
+   77.681 DEBUG    Loaded host: master-01_423f4d67-2137-289b-0587-e6a41b5a94ad
+   77.681 DEBUG    Adding host master-01_423f4d67-2137-289b-0587-e6a41b5a94ad to group guests
+   77.681 DEBUG    Loaded host: master-02_423f3063-2f9c-f796-6382-0255c2e3439d
+   77.681 DEBUG    Adding host master-02_423f3063-2f9c-f796-6382-0255c2e3439d to group guests
+   77.682 DEBUG    Loaded host: master-03_423f029c-71e2-44f0-2ec1-4dc64393b79b
+   77.682 DEBUG    Adding host master-03_423f029c-71e2-44f0-2ec1-4dc64393b79b to group guests
+   77.682 DEBUG    Loaded host: master-04_423f61e0-70be-35b9-e0ad-b27bdabf842d
+   77.682 DEBUG    Adding host master-04_423f61e0-70be-35b9-e0ad-b27bdabf842d to group guests
+   77.682 DEBUG    Loaded host: master-5_423f49c6-1fa2-4dfb-9000-2f736f3b3dd0
+   77.682 DEBUG    Adding host master-5_423f49c6-1fa2-4dfb-9000-2f736f3b3dd0 to group guests
+   77.683 DEBUG    Adding host master-node-1_423fe0da-5b0c-80d5-70ef-1522a7eb7919 to group guests
+   77.683 DEBUG    Adding host master-node-2_423f1eec-88e1-84b9-3cff-50f5c0c6512b to group guests
+   77.683 DEBUG    Adding host master-node-3_423f8da1-b251-a8cf-cf84-572da89e265c to group guests
+   77.684 DEBUG    Adding host master-node-4_423ff207-f6d0-13fd-d54f-889ad6e8090d to group guests
+   77.684 DEBUG    Adding host master_423f98ea-f9f0-c31b-a6ce-535bc3f69642 to group guests
+   77.684 DEBUG    Adding host node1_423f250c-9b6e-b190-ba2f-660ccec92dfa to group guests
+   77.684 DEBUG    Adding host node2_423f3cc8-3fba-e049-4fca-b4211d0c3c92 to group guests
+   77.685 DEBUG    Loaded host: openvas-scanner-1_423f882a-5984-5304-ba71-c1a5ef1cbef1
+   77.685 DEBUG    Adding host openvas-scanner-1_423f882a-5984-5304-ba71-c1a5ef1cbef1 to group guests
+   77.685 DEBUG    Adding host pm_server_423faf73-52ef-8506-69ec-5759b05afe8b to group guests
+   77.685 DEBUG    Adding host prashansa_static_423f4fd7-ac54-7368-3b18-48521806a992 to group guests
+   77.686 DEBUG    Loaded host: rhev-nfs-storage1_423f7820-47e2-4473-e9ec-917ebbbdf6ac
+   77.686 DEBUG    Adding host rhev-nfs-storage1_423f7820-47e2-4473-e9ec-917ebbbdf6ac to group guests
+   77.686 DEBUG    Adding host rhev_host43_423f08fa-dfa4-3105-e97f-401a63396dec to group guests
+   77.686 DEBUG    Loaded host: rhevmgrnew_423f10be-58c3-8417-a9cf-58c3f349e4b7
+   77.686 DEBUG    Adding host rhevmgrnew_423f10be-58c3-8417-a9cf-58c3f349e4b7 to group guests
+   77.686 DEBUG    Adding host rhvhost1_423f22e9-3ef5-0fc1-bd78-20367ce457b2 to group guests
+   77.687 DEBUG    Adding host rhvhost2_423fd4cd-7298-c0e3-0fd7-8bbbee252ca2 to group guests
+   77.687 DEBUG    Loaded host: rhvm_423f26ea-62dd-04d3-ad09-773654003f6e
+   77.687 DEBUG    Adding host rhvm_423f26ea-62dd-04d3-ad09-773654003f6e to group guests
+   77.866 DEBUG    Loaded host: vcN_Master-node_423ff834-fb6f-db6e-2933-a3c09f0964d0
+   77.866 DEBUG    Adding host vcN_Master-node_423ff834-fb6f-db6e-2933-a3c09f0964d0 to group guests
+   77.866 DEBUG    Loaded host: vcN_Workernode1_423f98b0-800e-1e00-0c6c-94c95ed0eaf0
+   77.866 DEBUG    Adding host vcN_Workernode1_423f98b0-800e-1e00-0c6c-94c95ed0eaf0 to group guests
+   77.867 DEBUG    Loaded host: vcN_Workernode2_423fe1fc-d23c-4a99-b93b-83076e757a3b
+   77.867 DEBUG    Adding host vcN_Workernode2_423fe1fc-d23c-4a99-b93b-83076e757a3b to group guests
+   77.867 DEBUG    Loaded host: worker-01_423f630d-60c1-bb11-abcc-6005ff931074
+   77.867 DEBUG    Adding host worker-01_423f630d-60c1-bb11-abcc-6005ff931074 to group guests
+   77.867 DEBUG    Loaded host: worker-02_423f5bb5-b832-fbcb-d71a-816e75f1c0d7
+   77.867 DEBUG    Adding host worker-02_423f5bb5-b832-fbcb-d71a-816e75f1c0d7 to group guests
+   77.868 DEBUG    Adding host worker-node-1_423fdb83-fd1f-27a3-95d9-035881840005 to group guests
+   77.868 DEBUG    Adding child group guests to parent all
+   77.868 DEBUG    Adding host bastion_423f8616-3c53-8bda-f903-4b2d04510170 to group rhel7_64Guest
+   77.868 DEBUG    Adding host cloudserver01_423f7ad4-d8ae-c229-f47a-74671b5960c0 to group rhel7_64Guest
+   77.868 DEBUG    Adding host cloudserver03_423f4cd8-c997-f832-55de-f5bb969b15e0 to group rhel7_64Guest
+   77.868 DEBUG    Adding host gslcloudform_423fef2e-3847-af12-02a8-a62a0a95bf1b to group rhel7_64Guest
+   77.869 DEBUG    Adding host haproxy_423fdcaa-4c28-6f15-ebd1-0663804c99cb to group rhel7_64Guest
+   77.869 DEBUG    Adding host master-01_423f4d67-2137-289b-0587-e6a41b5a94ad to group rhel7_64Guest
+   77.869 DEBUG    Adding host master-02_423f3063-2f9c-f796-6382-0255c2e3439d to group rhel7_64Guest
+   77.869 DEBUG    Adding host master-03_423f029c-71e2-44f0-2ec1-4dc64393b79b to group rhel7_64Guest
+   77.870 DEBUG    Adding host master-04_423f61e0-70be-35b9-e0ad-b27bdabf842d to group rhel7_64Guest
+   77.870 DEBUG    Adding host master-5_423f49c6-1fa2-4dfb-9000-2f736f3b3dd0 to group rhel7_64Guest
+   77.870 DEBUG    Adding host rhev-nfs-storage1_423f7820-47e2-4473-e9ec-917ebbbdf6ac to group rhel7_64Guest
+   77.870 DEBUG    Adding host rhevmgrnew_423f10be-58c3-8417-a9cf-58c3f349e4b7 to group rhel7_64Guest
+   77.870 DEBUG    Adding host rhvm_423f26ea-62dd-04d3-ad09-773654003f6e to group rhel7_64Guest
+   77.870 DEBUG    Adding host vcN_Master-node_423ff834-fb6f-db6e-2933-a3c09f0964d0 to group rhel7_64Guest
+   77.871 DEBUG    Adding host vcN_Workernode1_423f98b0-800e-1e00-0c6c-94c95ed0eaf0 to group rhel7_64Guest
+   77.871 DEBUG    Adding host vcN_Workernode2_423fe1fc-d23c-4a99-b93b-83076e757a3b to group rhel7_64Guest
+   77.871 DEBUG    Adding host worker-01_423f630d-60c1-bb11-abcc-6005ff931074 to group rhel7_64Guest
+   77.871 DEBUG    Adding host worker-02_423f5bb5-b832-fbcb-d71a-816e75f1c0d7 to group rhel7_64Guest
+   77.871 DEBUG    Adding child group rhel7_64Guest to parent all
+   77.872 DEBUG    Adding host AnsibleAWX_423f2900-410f-3ce0-34c5-e7f9d71332c5 to group ubuntu64Guest
+   77.872 DEBUG    Adding host Controller_423ffae3-efc6-c9f3-c603-d894dd861561 to group ubuntu64Guest
+   77.872 DEBUG    Adding host KVM Server_423f7323-a5e7-710e-e3fd-b7f8e0ef0d09 to group ubuntu64Guest
+   77.872 DEBUG    Adding host cloudify-vm_423fece3-0b55-487a-59c3-4447636f9dc2 to group ubuntu64Guest
+   77.872 DEBUG    Adding host openvas-scanner-1_423f882a-5984-5304-ba71-c1a5ef1cbef1 to group ubuntu64Guest
+   77.872 DEBUG    Adding child group ubuntu64Guest to parent all
+   77.873 INFO     Loaded 7 groups, 43 hosts
+   78.223 DEBUG    Inventory variables unmodified
+   80.236 DEBUG    Group "None" added
+   80.251 DEBUG    Group "centos6_64Guest" added
+   80.264 DEBUG    Group "centos7_64Guest" added
+   80.310 DEBUG    Group "fedora64Guest" added
+   80.321 DEBUG    Group "guests" added
+   80.329 DEBUG    Group "rhel7_64Guest" added
+   80.337 DEBUG    Group "ubuntu64Guest" added
+   80.416 DEBUG    Host "AWX_423fcf64-aec1-b76d-2f91-f98a2a2f9a5b" added
+   80.434 DEBUG    Host "Ansible-Tower-3.7_423f99ef-913c-1db6-5b69-aaf0df03df64" added
+   80.444 DEBUG    Host "AnsibleAWX_423f2900-410f-3ce0-34c5-e7f9d71332c5" added
+   80.455 DEBUG    Host "AnsibleTower_423f0a7e-12dd-28f8-80ab-72a3ba43157e" added
+   80.465 DEBUG    Host "Controller_423ffae3-efc6-c9f3-c603-d894dd861561" added
+   80.476 DEBUG    Host "Infoblox_423f3b85-e312-8b6b-2aef-9e8a1877e996" added
+   80.487 DEBUG    Host "KVM Server_423f7323-a5e7-710e-e3fd-b7f8e0ef0d09" added
+   80.498 DEBUG    Host "NikhilAnsibleTower_423f62af-eaa6-301a-ff71-d8c79cb7b204" added
+   80.508 DEBUG    Host "Openvas Scanner_423f4439-9f1d-b66a-daa4-0627dbd8176e" added (disabled)
+   80.528 DEBUG    Host "bastion_423f8616-3c53-8bda-f903-4b2d04510170" added
+   80.542 DEBUG    Host "cloudify-vm_423fece3-0b55-487a-59c3-4447636f9dc2" added
+   80.555 DEBUG    Host "cloudserver01_423f7ad4-d8ae-c229-f47a-74671b5960c0" added
+   80.572 DEBUG    Host "cloudserver03_423f4cd8-c997-f832-55de-f5bb969b15e0" added
+   80.582 DEBUG    Host "gslcloudform_423fef2e-3847-af12-02a8-a62a0a95bf1b" added
+   80.591 DEBUG    Host "haproxy_423fdcaa-4c28-6f15-ebd1-0663804c99cb" added
+   80.600 DEBUG    Host "load-balancer_423f9cc0-54ab-10c6-f522-a9df2ccf84c9" added
+   80.618 DEBUG    Host "master-01_423f4d67-2137-289b-0587-e6a41b5a94ad" added
+   80.628 DEBUG    Host "master-02_423f3063-2f9c-f796-6382-0255c2e3439d" added
+   80.641 DEBUG    Host "master-03_423f029c-71e2-44f0-2ec1-4dc64393b79b" added
+   80.652 DEBUG    Host "master-04_423f61e0-70be-35b9-e0ad-b27bdabf842d" added
+   80.660 DEBUG    Host "master-5_423f49c6-1fa2-4dfb-9000-2f736f3b3dd0" added
+   80.674 DEBUG    Host "master-node-1_423fe0da-5b0c-80d5-70ef-1522a7eb7919" added
+   80.684 DEBUG    Host "master-node-2_423f1eec-88e1-84b9-3cff-50f5c0c6512b" added
+   80.694 DEBUG    Host "master-node-3_423f8da1-b251-a8cf-cf84-572da89e265c" added
+   80.703 DEBUG    Host "master-node-4_423ff207-f6d0-13fd-d54f-889ad6e8090d" added
+   80.717 DEBUG    Host "master_423f98ea-f9f0-c31b-a6ce-535bc3f69642" added
+   80.728 DEBUG    Host "node1_423f250c-9b6e-b190-ba2f-660ccec92dfa" added
+   80.738 DEBUG    Host "node2_423f3cc8-3fba-e049-4fca-b4211d0c3c92" added
+   80.757 DEBUG    Host "openvas-scanner-1_423f882a-5984-5304-ba71-c1a5ef1cbef1" added
+   80.768 DEBUG    Host "pm_server_423faf73-52ef-8506-69ec-5759b05afe8b" added
+   80.777 DEBUG    Host "prashansa_static_423f4fd7-ac54-7368-3b18-48521806a992" added
+   80.787 DEBUG    Host "rhev-nfs-storage1_423f7820-47e2-4473-e9ec-917ebbbdf6ac" added
+   80.797 DEBUG    Host "rhev_host43_423f08fa-dfa4-3105-e97f-401a63396dec" added (disabled)
+   80.811 DEBUG    Host "rhevmgrnew_423f10be-58c3-8417-a9cf-58c3f349e4b7" added
+   80.823 DEBUG    Host "rhvhost1_423f22e9-3ef5-0fc1-bd78-20367ce457b2" added (disabled)
+   80.836 DEBUG    Host "rhvhost2_423fd4cd-7298-c0e3-0fd7-8bbbee252ca2" added (disabled)
+   80.850 DEBUG    Host "rhvm_423f26ea-62dd-04d3-ad09-773654003f6e" added
+   80.870 DEBUG    Host "vcN_Master-node_423ff834-fb6f-db6e-2933-a3c09f0964d0" added
+   80.881 DEBUG    Host "vcN_Workernode1_423f98b0-800e-1e00-0c6c-94c95ed0eaf0" added
+   80.893 DEBUG    Host "vcN_Workernode2_423fe1fc-d23c-4a99-b93b-83076e757a3b" added
+   80.902 DEBUG    Host "worker-01_423f630d-60c1-bb11-abcc-6005ff931074" added
+   80.913 DEBUG    Host "worker-02_423f5bb5-b832-fbcb-d71a-816e75f1c0d7" added
+   80.920 DEBUG    Host "worker-node-1_423fdb83-fd1f-27a3-95d9-035881840005" added
+   80.968 DEBUG    Host "AnsibleTower_423f0a7e-12dd-28f8-80ab-72a3ba43157e" added to group "centos6_64Guest"
+   81.035 DEBUG    Host "Ansible-Tower-3.7_423f99ef-913c-1db6-5b69-aaf0df03df64" added to group "centos7_64Guest"
+   81.036 DEBUG    Host "AWX_423fcf64-aec1-b76d-2f91-f98a2a2f9a5b" added to group "centos7_64Guest"
+   81.036 DEBUG    Host "load-balancer_423f9cc0-54ab-10c6-f522-a9df2ccf84c9" added to group "centos7_64Guest"
+   81.036 DEBUG    Host "master_423f98ea-f9f0-c31b-a6ce-535bc3f69642" added to group "centos7_64Guest"
+   81.037 DEBUG    Host "master-node-1_423fe0da-5b0c-80d5-70ef-1522a7eb7919" added to group "centos7_64Guest"
+   81.037 DEBUG    Host "master-node-2_423f1eec-88e1-84b9-3cff-50f5c0c6512b" added to group "centos7_64Guest"
+   81.037 DEBUG    Host "master-node-3_423f8da1-b251-a8cf-cf84-572da89e265c" added to group "centos7_64Guest"
+   81.038 DEBUG    Host "master-node-4_423ff207-f6d0-13fd-d54f-889ad6e8090d" added to group "centos7_64Guest"
+   81.038 DEBUG    Host "NikhilAnsibleTower_423f62af-eaa6-301a-ff71-d8c79cb7b204" added to group "centos7_64Guest"
+   81.038 DEBUG    Host "node1_423f250c-9b6e-b190-ba2f-660ccec92dfa" added to group "centos7_64Guest"
+   81.038 DEBUG    Host "node2_423f3cc8-3fba-e049-4fca-b4211d0c3c92" added to group "centos7_64Guest"
+   81.039 DEBUG    Host "pm_server_423faf73-52ef-8506-69ec-5759b05afe8b" added to group "centos7_64Guest"
+   81.039 DEBUG    Host "prashansa_static_423f4fd7-ac54-7368-3b18-48521806a992" added to group "centos7_64Guest"
+   81.039 DEBUG    Host "worker-node-1_423fdb83-fd1f-27a3-95d9-035881840005" added to group "centos7_64Guest"
+   81.072 DEBUG    Host "Infoblox_423f3b85-e312-8b6b-2aef-9e8a1877e996" added to group "fedora64Guest"
+   81.095 DEBUG    Host "AnsibleAWX_423f2900-410f-3ce0-34c5-e7f9d71332c5" added to group "guests"
+   81.095 DEBUG    Host "Ansible-Tower-3.7_423f99ef-913c-1db6-5b69-aaf0df03df64" added to group "guests"
+   81.096 DEBUG    Host "AnsibleTower_423f0a7e-12dd-28f8-80ab-72a3ba43157e" added to group "guests"
+   81.096 DEBUG    Host "AWX_423fcf64-aec1-b76d-2f91-f98a2a2f9a5b" added to group "guests"
+   81.096 DEBUG    Host "bastion_423f8616-3c53-8bda-f903-4b2d04510170" added to group "guests"
+   81.096 DEBUG    Host "cloudify-vm_423fece3-0b55-487a-59c3-4447636f9dc2" added to group "guests"
+   81.096 DEBUG    Host "cloudserver01_423f7ad4-d8ae-c229-f47a-74671b5960c0" added to group "guests"
+   81.097 DEBUG    Host "cloudserver03_423f4cd8-c997-f832-55de-f5bb969b15e0" added to group "guests"
+   81.097 DEBUG    Host "Controller_423ffae3-efc6-c9f3-c603-d894dd861561" added to group "guests"
+   81.097 DEBUG    Host "gslcloudform_423fef2e-3847-af12-02a8-a62a0a95bf1b" added to group "guests"
+   81.097 DEBUG    Host "haproxy_423fdcaa-4c28-6f15-ebd1-0663804c99cb" added to group "guests"
+   81.097 DEBUG    Host "Infoblox_423f3b85-e312-8b6b-2aef-9e8a1877e996" added to group "guests"
+   81.097 DEBUG    Host "KVM Server_423f7323-a5e7-710e-e3fd-b7f8e0ef0d09" added to group "guests"
+   81.098 DEBUG    Host "load-balancer_423f9cc0-54ab-10c6-f522-a9df2ccf84c9" added to group "guests"
+   81.098 DEBUG    Host "master-01_423f4d67-2137-289b-0587-e6a41b5a94ad" added to group "guests"
+   81.098 DEBUG    Host "master-02_423f3063-2f9c-f796-6382-0255c2e3439d" added to group "guests"
+   81.098 DEBUG    Host "master-03_423f029c-71e2-44f0-2ec1-4dc64393b79b" added to group "guests"
+   81.098 DEBUG    Host "master-04_423f61e0-70be-35b9-e0ad-b27bdabf842d" added to group "guests"
+   81.098 DEBUG    Host "master_423f98ea-f9f0-c31b-a6ce-535bc3f69642" added to group "guests"
+   81.099 DEBUG    Host "master-5_423f49c6-1fa2-4dfb-9000-2f736f3b3dd0" added to group "guests"
+   81.099 DEBUG    Host "master-node-1_423fe0da-5b0c-80d5-70ef-1522a7eb7919" added to group "guests"
+   81.099 DEBUG    Host "master-node-2_423f1eec-88e1-84b9-3cff-50f5c0c6512b" added to group "guests"
+   81.099 DEBUG    Host "master-node-3_423f8da1-b251-a8cf-cf84-572da89e265c" added to group "guests"
+   81.099 DEBUG    Host "master-node-4_423ff207-f6d0-13fd-d54f-889ad6e8090d" added to group "guests"
+   81.099 DEBUG    Host "NikhilAnsibleTower_423f62af-eaa6-301a-ff71-d8c79cb7b204" added to group "guests"
+   81.099 DEBUG    Host "node1_423f250c-9b6e-b190-ba2f-660ccec92dfa" added to group "guests"
+   81.100 DEBUG    Host "node2_423f3cc8-3fba-e049-4fca-b4211d0c3c92" added to group "guests"
+   81.100 DEBUG    Host "openvas-scanner-1_423f882a-5984-5304-ba71-c1a5ef1cbef1" added to group "guests"
+   81.100 DEBUG    Host "Openvas Scanner_423f4439-9f1d-b66a-daa4-0627dbd8176e" added to group "guests"
+   81.100 DEBUG    Host "pm_server_423faf73-52ef-8506-69ec-5759b05afe8b" added to group "guests"
+   81.100 DEBUG    Host "prashansa_static_423f4fd7-ac54-7368-3b18-48521806a992" added to group "guests"
+   81.100 DEBUG    Host "rhev_host43_423f08fa-dfa4-3105-e97f-401a63396dec" added to group "guests"
+   81.100 DEBUG    Host "rhevmgrnew_423f10be-58c3-8417-a9cf-58c3f349e4b7" added to group "guests"
+   81.101 DEBUG    Host "rhev-nfs-storage1_423f7820-47e2-4473-e9ec-917ebbbdf6ac" added to group "guests"
+   81.101 DEBUG    Host "rhvhost1_423f22e9-3ef5-0fc1-bd78-20367ce457b2" added to group "guests"
+   81.101 DEBUG    Host "rhvhost2_423fd4cd-7298-c0e3-0fd7-8bbbee252ca2" added to group "guests"
+   81.101 DEBUG    Host "rhvm_423f26ea-62dd-04d3-ad09-773654003f6e" added to group "guests"
+   81.101 DEBUG    Host "vcN_Master-node_423ff834-fb6f-db6e-2933-a3c09f0964d0" added to group "guests"
+   81.102 DEBUG    Host "vcN_Workernode1_423f98b0-800e-1e00-0c6c-94c95ed0eaf0" added to group "guests"
+   81.102 DEBUG    Host "vcN_Workernode2_423fe1fc-d23c-4a99-b93b-83076e757a3b" added to group "guests"
+   81.102 DEBUG    Host "worker-01_423f630d-60c1-bb11-abcc-6005ff931074" added to group "guests"
+   81.102 DEBUG    Host "worker-02_423f5bb5-b832-fbcb-d71a-816e75f1c0d7" added to group "guests"
+   81.102 DEBUG    Host "worker-node-1_423fdb83-fd1f-27a3-95d9-035881840005" added to group "guests"
+   81.149 DEBUG    Host "Openvas Scanner_423f4439-9f1d-b66a-daa4-0627dbd8176e" added to group "None"
+   81.149 DEBUG    Host "rhev_host43_423f08fa-dfa4-3105-e97f-401a63396dec" added to group "None"
+   81.149 DEBUG    Host "rhvhost1_423f22e9-3ef5-0fc1-bd78-20367ce457b2" added to group "None"
+   81.149 DEBUG    Host "rhvhost2_423fd4cd-7298-c0e3-0fd7-8bbbee252ca2" added to group "None"
+   81.177 DEBUG    Host "bastion_423f8616-3c53-8bda-f903-4b2d04510170" added to group "rhel7_64Guest"
+   81.178 DEBUG    Host "cloudserver01_423f7ad4-d8ae-c229-f47a-74671b5960c0" added to group "rhel7_64Guest"
+   81.178 DEBUG    Host "cloudserver03_423f4cd8-c997-f832-55de-f5bb969b15e0" added to group "rhel7_64Guest"
+   81.178 DEBUG    Host "gslcloudform_423fef2e-3847-af12-02a8-a62a0a95bf1b" added to group "rhel7_64Guest"
+   81.178 DEBUG    Host "haproxy_423fdcaa-4c28-6f15-ebd1-0663804c99cb" added to group "rhel7_64Guest"
+   81.178 DEBUG    Host "master-01_423f4d67-2137-289b-0587-e6a41b5a94ad" added to group "rhel7_64Guest"
+   81.178 DEBUG    Host "master-02_423f3063-2f9c-f796-6382-0255c2e3439d" added to group "rhel7_64Guest"
+   81.179 DEBUG    Host "master-03_423f029c-71e2-44f0-2ec1-4dc64393b79b" added to group "rhel7_64Guest"
+   81.179 DEBUG    Host "master-04_423f61e0-70be-35b9-e0ad-b27bdabf842d" added to group "rhel7_64Guest"
+   81.179 DEBUG    Host "master-5_423f49c6-1fa2-4dfb-9000-2f736f3b3dd0" added to group "rhel7_64Guest"
+   81.179 DEBUG    Host "rhevmgrnew_423f10be-58c3-8417-a9cf-58c3f349e4b7" added to group "rhel7_64Guest"
+   81.179 DEBUG    Host "rhev-nfs-storage1_423f7820-47e2-4473-e9ec-917ebbbdf6ac" added to group "rhel7_64Guest"
+   81.179 DEBUG    Host "rhvm_423f26ea-62dd-04d3-ad09-773654003f6e" added to group "rhel7_64Guest"
+   81.179 DEBUG    Host "vcN_Master-node_423ff834-fb6f-db6e-2933-a3c09f0964d0" added to group "rhel7_64Guest"
+   81.180 DEBUG    Host "vcN_Workernode1_423f98b0-800e-1e00-0c6c-94c95ed0eaf0" added to group "rhel7_64Guest"
+   81.180 DEBUG    Host "vcN_Workernode2_423fe1fc-d23c-4a99-b93b-83076e757a3b" added to group "rhel7_64Guest"
+   81.180 DEBUG    Host "worker-01_423f630d-60c1-bb11-abcc-6005ff931074" added to group "rhel7_64Guest"
+   81.180 DEBUG    Host "worker-02_423f5bb5-b832-fbcb-d71a-816e75f1c0d7" added to group "rhel7_64Guest"
+   81.217 DEBUG    Host "AnsibleAWX_423f2900-410f-3ce0-34c5-e7f9d71332c5" added to group "ubuntu64Guest"
+   81.218 DEBUG    Host "cloudify-vm_423fece3-0b55-487a-59c3-4447636f9dc2" added to group "ubuntu64Guest"
+   81.218 DEBUG    Host "Controller_423ffae3-efc6-c9f3-c603-d894dd861561" added to group "ubuntu64Guest"
+   81.218 DEBUG    Host "KVM Server_423f7323-a5e7-710e-e3fd-b7f8e0ef0d09" added to group "ubuntu64Guest"
+   81.218 DEBUG    Host "openvas-scanner-1_423f882a-5984-5304-ba71-c1a5ef1cbef1" added to group "ubuntu64Guest"
+   82.312 ERROR    Number of licensed instances exceeded, would bring available instances to 53, system is licensed for 10.
+See http://www.ansible.com/renew for license extension information.

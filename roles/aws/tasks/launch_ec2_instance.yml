@@ -1,0 +1,19 @@
+---
+    - name: Launching the new EC2 Instance
+      ec2: 
+        aws_access_key: "{{ connection.aws_access_key | b64decode }}"
+        aws_secret_key: "{{ connection.aws_secret_key | b64decode }}"
+        group: "{{ resource_config.aws.security_group }}" 
+        instance_type: "{{ resource_config.aws.instance_type }}"
+        image: "{{ resource_config.aws.image }}" 
+        wait: true
+        region: "{{ resource_config.aws.region }}"
+        keypair: "{{ resource_config.aws.keypair }}"
+        instance_tags:
+          Name: "{{ resource_config.aws.vm_name }}"
+                 
+      register: ec2
+
+    - name: To display metadata of Ec2 instances
+      debug:
+        msg: "{{ ec2 }}"

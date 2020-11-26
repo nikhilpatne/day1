@@ -1,0 +1,4 @@
+---
+# tasks file for aws-ec2
+- import_tasks: launch_ec2_instance.yml
+- import_tasks: update_inventory.yml

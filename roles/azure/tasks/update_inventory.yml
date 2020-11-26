@@ -1,0 +1,55 @@
+---
+    - name: Fetch Inventory ID,Group ID and Add host "{{ azure_ipaddress.stdout_lines[0] }}" into Ansible towers inventory. 
+      block:
+        - name: fetch inventory id of "{{ tower_config.inventory_name }}"
+          uri:
+            url: "{{ tower_config.tower_hostname }}/api/v2/inventories/?name={{ tower_config.inventory_name|replace(' ', '%20') }}"
+            method: GET
+            user: "{{ tower_config.tower_username }}"
+            password: "{{ tower_config.tower_password }}"
+            force_basic_auth: yes
+            validate_certs: no
+            return_content: yes
+            status_code: 200
+          register: inventory
+
+        - name: Inventory ID of "{{ tower_config.inventory_name }}"
+          debug:
+             msg: "{{ inventory.json.results[0].id }}"
+
+           
+        - name: Fetch group_id of "{{ group_name }}"
+          uri:
+            url: "{{ tower_config.tower_hostname }}/api/v2/inventories/{{ inventory.json.results[0].id }}/groups/?name={{ group_name|replace(' ', '%20') }}"
+            method: GET
+            user: "{{ tower_config.tower_username }}"
+            password: "{{ tower_config.tower_password }}"
+            force_basic_auth: yes
+            validate_certs: no
+            return_content: yes
+            status_code: 200
+          register: group
+
+        - name: Group Id of "{{ group_name }}"
+          debug:
+              msg: "{{ group.json.results[0].id }}"
+                  
+        - name: Add host "{{ azure_ipaddress.stdout_lines[0] }}" to inventory.
+          uri:
+            url: "{{ tower_config.tower_hostname }}/api/v2/groups/{{ group.json.results[0].id }}/hosts/"
+            method: POST
+            user: "{{ tower_config.tower_username }}"
+            password: "{{ tower_config.tower_password }}"
+            force_basic_auth: yes
+            validate_certs: no
+            body_format: json
+            body:
+               name: "{{ azure_ipaddress.stdout_lines[0] }}"
+               description: "{{ resource_config.azure.vm_name }}"
+            # return_content: yes
+            status_code: 201
+          # register: result
+
+      rescue:
+        - fail:
+            msg: "Problem While Updating Inventory, Check the Inventory and group names and also the APIs"

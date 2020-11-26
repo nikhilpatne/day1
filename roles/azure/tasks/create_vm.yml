@@ -1,0 +1,38 @@
+---
+    - name: Launching Azure virtual machine
+      azure_rm_virtualmachine:
+
+        subscription_id: "{{ connection.azure.subscription_id | b64decode }}"
+        tenant: "{{ connection.azure.tenant | b64decode }}"
+        client_id: "{{ connection.azure.client_id | b64decode }}"
+        secret: "{{ connection.azure.secret | b64decode }}"
+        resource_group: "{{ resource_config.azure.resource_group  }}"
+        location: "{{ resource_config.azure.location }}"
+        name: "{{ resource_config.azure.vm_name }}"
+        vm_size: "{{ resource_config.azure.vm_size }}"
+        admin_username: "{{ resource_config.azure.admin_username }}"
+        admin_password: "{{ resource_config.azure.admin_password }}"
+        virtual_network_name: "{{ resource_config.azure.virtual_network_name }}"
+        subnet_name: "{{ resource_config.azure.subnet_name }}"
+        image:
+            offer: "{{ resource_config.vm_offer }}"
+            publisher: "{{ resource_config.vm_pub }}"
+            sku: "{{ resource_config.vm_sku }}"
+            version: latest
+      
+      register: facts
+
+
+
+    - name: To display all metadata of azure virtual machine
+      debug:
+        msg: "{{ facts }}"
+
+
+    - name: Registering the IP address while parsing metadata
+      shell: echo "{{ facts.ansible_facts.azure_vm.properties.networkProfile.networkInterfaces[0].properties.ipConfigurations[0].properties.publicIPAddress.properties.ipAddress }}"
+      register: azure_ipaddress
+
+    - name: Ip address of azure virtual machine
+      debug:
+        msg: "{{ azure_ipaddress.stdout_lines[0] }}"

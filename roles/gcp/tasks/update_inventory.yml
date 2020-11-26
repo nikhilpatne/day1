@@ -1,0 +1,55 @@
+---
+    - name: Fetch Inventory ID,Group ID and Add host "{{ address.address }}" into Ansible towers inventory. 
+      block:
+        - name: fetch inventory id of "{{ inventory_name }}"
+          uri:
+            url: "{{ tower_hostname }}/api/v2/inventories/?name={{ inventory_name|replace(' ', '%20') }}"
+            method: GET
+            user: "{{ tower_username }}"
+            password: "{{ tower_password }}"
+            force_basic_auth: yes
+            validate_certs: no
+            return_content: yes
+            status_code: 200
+          register: inventory
+
+        - name: Inventory ID of "{{ inventory_name }}"
+          debug:
+             msg: "{{ inventory.json.results[0].id }}"
+
+           
+        - name: Fetch group_id of "{{ group_name }}"
+          uri:
+            url: "{{ tower_hostname }}/api/v2/inventories/{{ inventory.json.results[0].id }}/groups/?name={{ group_name|replace(' ', '%20') }}"
+            method: GET
+            user: "{{ tower_username }}"
+            password: "{{ tower_password }}"
+            force_basic_auth: yes
+            validate_certs: no
+            return_content: yes
+            status_code: 200
+          register: group
+
+        - name: Group Id of "{{ group_name }}"
+          debug:
+              msg: "{{ group.json.results[0].id }}"
+                  
+        - name: Add host "{{ address.address }}" to inventory.
+          uri:
+            url: "{{ tower_hostname }}/api/v2/groups/{{ group.json.results[0].id }}/hosts/"
+            method: POST
+            user: "{{ tower_username }}"
+            password: "{{ tower_password }}"
+            force_basic_auth: yes
+            validate_certs: no
+            body_format: json
+            body:
+               name: "{{ address.address }}"
+               description: "{{ config_attributes.gce.vm_name | default(vm_name) }}"
+            # return_content: yes
+            status_code: 201
+          # register: result
+
+      rescue:
+        - fail:
+            msg: "Problem While Updating Inventory, Check the Inventory and group names and also the APIs"

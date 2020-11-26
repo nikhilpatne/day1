@@ -1,0 +1,15 @@
+---
+
+   - name: create a disk
+     gcp_compute_disk:
+        name: "{{ vm_name }}-disk"
+        source_image: 'projects/ubuntu-os-cloud/global/images/family/ubuntu-1604-lts'
+      #   source_image: 'ubuntu-1604-xenial-v20201111a'
+        zone: "{{ zone }}"
+        project: "{{ gcp_project }}"
+        auth_kind: "{{ gcp_cred_kind }}"
+        service_account_file: "{{ gcp_cred_file }}"
+        scopes:
+            - https://www.googleapis.com/auth/compute
+        state: present
+     register: disk

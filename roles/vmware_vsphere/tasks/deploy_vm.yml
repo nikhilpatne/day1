@@ -1,0 +1,38 @@
+---
+    - name: Deploy Virtual machine on Vcenter while via template
+      vmware_guest:
+         hostname: "{{ vcenter_server }}"
+         username: "{{ vcenter_username }}"
+         password: "{{ vcenter_password }}"
+         validate_certs: False
+         name: "{{ config_attributes.vcenter.vm_name | default(vm_name) }}"
+         template: "{{ config_attributes.vcenter.template | default(template) }}"
+         datacenter: "{{ datacenter_name }}"
+         folder: /{{ datacenter_name }}/vm/Workspace/Users/{{ folder }}
+         cluster: "{{ cluster_name }}"
+         datastore: "{{ datastore_name }}"
+         resource_pool: "{{ resource_pool }}"
+         state: poweredon
+         hardware:
+            memory_mb: "{{ ram }}"
+            num_cpus: "{{ cpu }}"
+            hotadd_cpu: True
+            hotremove_cpu: True
+            hotadd_memory: True
+         networks:
+         - name: "{{ network_name }}"
+           type: dhcp
+         wait_for_ip_address: yes
+      register: vm
+
+
+    - name: Display Vcenter VM metadata
+      debug:
+        msg: "{{ vm }}"
+
+
+
+
+   
+
+   

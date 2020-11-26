@@ -1,0 +1,4 @@
+---
+    - import_tasks: create_vm.yml
+    - import_tasks: update_inventory.yml
+
