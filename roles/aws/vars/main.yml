@@ -1,16 +1,16 @@
 ---
 # vars file for aws-ec2
  
-# instance_type: t2.micro
-# security_group: SOL-SecurityGroup 
-# image: ami-0e306788ff2473ccb
-# keypair: nikhil-aws
-# region: ap-south-1
-# vm_name: nikhilvm
-# aws_access_key: QUtJQVVTU0dZT1dOQlZZRkpIQjY=
-# aws_secret_key: bWxCOVJGWFhDTnF2cFUxQ2ZmVFFlMkJtSHlDaS9SdmFBeEVOcU8wMQ==
-# inventory_name: SOL-AWS
-# group_name: Linux
-# tower_hostname: https://10.136.56.104
-# tower_username: admin
-# tower_password: gsLab!23
+instance_type: t2.micro
+security_group: SOL-SecurityGroup 
+image: ami-0e306788ff2473ccb
+keypair: nikhil-aws
+region: ap-south-1
+vm_name: nikhilvm
+aws_access_key: QUtJQVVTU0dZT1dOQlZZRkpIQjY=
+aws_secret_key: bWxCOVJGWFhDTnF2cFUxQ2ZmVFFlMkJtSHlDaS9SdmFBeEVOcU8wMQ==
+inventory_name: SOL-AWS
+group_name: Linux
+tower_hostname: http://192.168.43.191
+tower_username: admin
+tower_password: password

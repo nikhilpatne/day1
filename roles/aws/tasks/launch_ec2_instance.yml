@@ -1,6 +1,6 @@
 ---
     - name: Launching the new EC2 Instance
-      ec2: 
+      amazon.aws.ec2: 
         aws_access_key: "{{ connection.aws_access_key | b64decode }}"
         aws_secret_key: "{{ connection.aws_secret_key | b64decode }}"
         group: "{{ resource_config.aws.security_group }}" 
