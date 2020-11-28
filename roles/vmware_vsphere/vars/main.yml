@@ -1,6 +1,6 @@
-vcenter_server: 10.0.88.202
-vcenter_username: multicloudvc@vcn.local
-vcenter_password: gsLab!1232
+vcenter_server: xxxxxxx
+vcenter_username: xxxxxx
+vcenter_password: xxxxxx
 vm_name: Test-nick
 template: Tmpl4vcN_centos7_20190515
 datacenter_name: DC-1
