@@ -15,9 +15,9 @@
         virtual_network_name: "{{ resource_config.azure.virtual_network_name }}"
         subnet_name: "{{ resource_config.azure.subnet_name }}"
         image:
-            offer: "{{ resource_config.vm_offer }}"
-            publisher: "{{ resource_config.vm_pub }}"
-            sku: "{{ resource_config.vm_sku }}"
+            offer: "{{ resource_config.azure.vm_offer }}"
+            publisher: "{{ resource_config.azure.vm_pub }}"
+            sku: "{{ resource_config.azure.vm_sku }}"
             version: latest
       
       register: facts
