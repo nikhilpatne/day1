@@ -2,10 +2,10 @@
     - name: Launching Azure virtual machine
       azure_rm_virtualmachine:
 
-        subscription_id: "{{ connection.azure.subscription_id | b64decode }}"
-        tenant: "{{ connection.azure.tenant | b64decode }}"
-        client_id: "{{ connection.azure.client_id | b64decode }}"
-        secret: "{{ connection.azure.secret | b64decode }}"
+        subscription_id: "{{ connection.subscription_id | b64decode }}"
+        tenant: "{{ connection.tenant | b64decode }}"
+        client_id: "{{ connection.client_id | b64decode }}"
+        secret: "{{ connection.secret | b64decode }}"
         resource_group: "{{ resource_config.azure.resource_group  }}"
         location: "{{ resource_config.azure.location }}"
         name: "{{ resource_config.azure.vm_name }}"
