@@ -2,4 +2,11 @@
   - name: To create GCP service principal credentials file
     copy: content="{{ resource_config.gcp.service_principal }}" dest="$HOME/gcp_service_account.json"
     
+  - name: To delete file
+    file:
+      path: $HOME/gcp_service_account.json
+      state: absent
+    
+    
+    
           
