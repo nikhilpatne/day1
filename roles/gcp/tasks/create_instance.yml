@@ -17,7 +17,7 @@
         zone: "{{ resource_config.gcp.zone }}"
         project: "{{ resource_config.gcp.gcp_project }}"
         auth_kind: "{{ resource_config.gcp.gcp_cred_kind }}"
-        service_account_file: "{{ resource_config.gcp.gcp_cred_file }}"
+#         service_account_file: "{{ resource_config.gcp.gcp_cred_file }}"
         scopes:
           - https://www.googleapis.com/auth/compute
       register: instance
