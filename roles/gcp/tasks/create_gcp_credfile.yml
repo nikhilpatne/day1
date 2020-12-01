@@ -1,5 +1,5 @@
 ---
   - name: To create GCP service principal credentials file
-    copy: content="{{ service_principal }}" dest="{{ role_path }}/files/gcp_service_account.json"
+    copy: content="{{ resource_config.gcp.service_principal }}" dest="$HOME/gcp_service_account.json"
     
           
