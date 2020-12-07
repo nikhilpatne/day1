@@ -5,4 +5,5 @@
       zone: us-central1-a
       machine_type: n1-standard-1
       image: debian-8
+      project_id: "white-artwork-280915"
       state: present
