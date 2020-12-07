@@ -2,22 +2,22 @@
     - name: Launching Azure virtual machine
       azure_rm_virtualmachine:
 
-#         subscription_id: "{{ connection.subscription_id | b64decode }}"
-#         tenant: "{{ connection.tenant | b64decode }}"
-#         client_id: "{{ connection.client_id | b64decode }}"
-#         secret: "{{ connection.secret | b64decode }}"
-        resource_group: "{{ resource_config.azure.resource_group  }}"
-        location: "{{ resource_config.azure.location }}"
-        name: "{{ resource_config.azure.vm_name }}"
-        vm_size: "{{ resource_config.azure.vm_size }}"
-        admin_username: "{{ resource_config.azure.admin_username }}"
-        admin_password: "{{ resource_config.azure.admin_password }}"
-        virtual_network_name: "{{ resource_config.azure.virtual_network_name }}"
-        subnet_name: "{{ resource_config.azure.subnet_name }}"
+        # subscription_id: "{{ connection.subscription_id | b64decode }}"
+        # tenant: "{{ connection.tenant | b64decode }}"
+        # client_id: "{{ connection.client_id | b64decode }}"
+        # secret: "{{ connection.secret | b64decode }}"
+        resource_group: "{{ resource_config.resource_group  }}"
+        location: "{{ resource_config.location }}"
+        name: "{{ resource_config.vm_name }}"
+        vm_size: "{{ resource_config.vm_size }}"
+        admin_username: "{{ resource_config.admin_username }}"
+        admin_password: "{{ resource_config.admin_password }}"
+        virtual_network_name: "{{ resource_config.virtual_network_name }}"
+        subnet_name: "{{ resource_config.subnet_name }}"
         image:
-            offer: "{{ resource_config.azure.vm_offer }}"
-            publisher: "{{ resource_config.azure.vm_pub }}"
-            sku: "{{ resource_config.azure.vm_sku }}"
+            offer: "{{ resource_config.vm_offer }}"
+            publisher: "{{ resource_config.vm_pub }}"
+            sku: "{{ resource_config.vm_sku }}"
             version: latest
       
       register: facts

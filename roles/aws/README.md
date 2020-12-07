@@ -22,7 +22,7 @@ Version Supported: N/A
 
 Tested Operating Systems
 
-- UBUNTU 18.04 LTS
+- UBUNTU 18.04 LTS / UBUNTU 20.04 LTS
 
 Operating System Pre-Requisites
 
@@ -30,8 +30,7 @@ Operating System Pre-Requisites
 	  
 ## Dependencies
 ------------
-1. [awscli](https://aws.amazon.com/cli/) should be configured with aws creds
-2. [boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/quickstart.html) `Python SDK for AWS`
+1. [boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/quickstart.html) `Python SDK for AWS`
 
 
 ## Installation and Configuration
@@ -41,25 +40,7 @@ Use the package manager [pip](https://pip.pypa.io/en/stable/) to install boto3.
 ```
 pip3 install boto3
 ```
-Configure [awscli](https://aws.amazon.com/cli/) with your server as follows.
-```
-sudo apt-get install awscli   
-```
-Then you can to configure your credentials file as follows:
-```
-aws configure
-```
-Alternatively, you can create the credential file yourself. By default, its location is at `~/.aws/credentials`
-```
-[default]
-aws_access_key_id = YOUR_ACCESS_KEY
-aws_secret_access_key = YOUR_SECRET_KEY
-```
-You may also want to set a default region. This can be done in the configuration file. By default, its location is at `~/.aws/config`
-```
-[default]
-region=YOUR_DEFAULT_REGION
-```
+
 
 
 
@@ -84,44 +65,30 @@ region=YOUR_DEFAULT_REGION
 | {{ region }} | reagion/zone in which your instance is located | south-ap-1 | Default
 
 
- 
-
 
 ## Extra variables JSON structure
 ```
 {
-  "extra_vars": {
-    "provider": [
-      "aws"
-    ],
-    "config_attributes" : {
-       "aws" : {
-            "security_group" : "OnceAgain2",
-            "instance_type" :"t2.small",
-            "image":"ami-040c7ad0a93be494e",
-            "count": "2"
-        }
+    "extra_vars": {
+        "provider_type": "aws",
+        "resource_config": {
+            "security_group": "SOL-SecurityGroup",
+            "instance_type": "t2.micro",
+            "image": "ami-0e306788ff2473ccb",
+            "keypair": "nikhil-aws",
+            "region": "ap-south-1",
+            "vm_name": "nikhil-sol-0001"
+        },
+        "tower_config": {
+            "tower_hostname": "http://192.168.43.191",
+            "tower_username": "admin",
+            "tower_password": "cGFzc3dvcmQ=",
+            "inventory_name": "SOL-AWS"
+        },
+        "group_name": "Linux"
     }
-  
-  }
 }
 ```
-## Dynamic Inventory Sync
-
-- Step 1: Go to Inventory tab and create new inventory. as shown in figure.
- <img width="700" height="250" src="files/in1.png">
-
-- Step 2: Click on `Source` option , create new source , provider valid credentials and select `Amazon EC2` as source type.<br>
-Note: Do not forget to check `Ovewrite` option , Save it.
-<br/>
-then `start sync process` <br/><br/>
-<img width="700" height="250" src="files/in2.png">
-
-- Step3: Wait until sync process end then go to `hosts` tab to see
-list of hosts available on AWS EC2.
-<br/><br/>
-<img width="700" height="250" src="files/in3.png">
-
 
 
 License

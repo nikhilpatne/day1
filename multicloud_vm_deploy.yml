@@ -5,14 +5,14 @@
     gather_facts: False
 
     vars:
-       provider : "{{ provider }}"
+       provider_type : "{{ provider_type }}"
 
     roles:
 
-    - { role: azure , when: ('azure' in provider)}
-    - { role: aws , when: ('aws' in provider)}
-    - { role: gcp , when: ('gcp' in provider)}
-    - { role: vmware_vsphere , when: ('vmware_vsphere' in provider)}
+    - { role: azure , when: provider_type == "azure" }
+    - { role: aws , when: provider_type == "aws" }
+    - { role: gcp , when: provider_type == "gcp" }
+    - { role: vmware_vsphere , when: provider_type == "vmware_vsphere" }
 
 
 
