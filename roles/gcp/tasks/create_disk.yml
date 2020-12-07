@@ -2,12 +2,12 @@
 
    - name: create a disk
      gcp_compute_disk:
-        name: "{{ resource_config.gcp.vm_name }}-disk"
-        source_image: "{{ resource_config.gcp.source_image }}"
+        name: "{{ resource_config.vm_name }}-disk"
+        source_image: "{{ resource_config.source_image }}"
       #   source_image: 'ubuntu-1604-xenial-v20201111a'
-        zone: "{{ resource_config.gcp.zone }}"
-        project: "{{ resource_config.gcp.gcp_project }}"
-        auth_kind: "{{ resource_config.gcp.gcp_cred_kind }}"
+        zone: "{{ resource_config.zone }}"
+        project: "{{ resource_config.gcp_project }}"
+        auth_kind: "{{ resource_config.gcp_cred_kind }}"
 #         service_account_file: "{{ resource_config.gcp.gcp_cred_file }}"
         scopes:
             - https://www.googleapis.com/auth/compute

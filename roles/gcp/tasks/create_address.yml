@@ -2,10 +2,10 @@
 
    - name: create a address
      gcp_compute_address:
-        name: "{{ resource_config.gcp.vm_name }}-address"
-        region: "{{ resource_config.gcp.region }}"
-        project: "{{ resource_config.gcp.gcp_project }}"
-        auth_kind: "{{ resource_config.gcp.gcp_cred_kind }}"
+        name: "{{ resource_config.vm_name }}-address"
+        region: "{{ resource_config.region }}"
+        project: "{{ resource_config.gcp_project }}"
+        auth_kind: "{{ resource_config.gcp_cred_kind }}"
 #         service_account_file: "{{ resource_config.gcp.gcp_cred_file }}"
         scopes:
             - https://www.googleapis.com/auth/compute
