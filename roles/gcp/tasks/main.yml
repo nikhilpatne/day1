@@ -1,7 +1,7 @@
 ---
-#     - import_tasks: create_gcp_credfile.yml
-    - import_tasks: create_disk.yml
-    - import_tasks: create_network.yml
-    - import_tasks: create_address.yml
-    - import_tasks: create_instance.yml
+    # - import_tasks: create_disk.yml
+    # - import_tasks: create_network.yml
+    # - import_tasks: create_address.yml
+    # - import_tasks: create_instance.yml
+    - import_tasks: create_instance_2.yml
     - import_tasks: update_inventory.yml
