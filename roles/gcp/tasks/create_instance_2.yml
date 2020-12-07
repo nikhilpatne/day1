@@ -1,5 +1,6 @@
 ---
-  - gce:
+  - name: Using new module
+    gce:
       instance_names: my-test-instance1
       zone: us-central1-a
       machine_type: n1-standard-1
