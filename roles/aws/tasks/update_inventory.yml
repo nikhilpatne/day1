@@ -45,10 +45,14 @@
             body_format: json
             body:
                name: "{{ ec2.instances[0].public_ip }}"
-               description: '{{ {
-                 "name": "{{ resource_config.vm_name }}",
-                 "disk_size": ""
-               }}}'
+               description: "{{ 
+                 '{
+                 'name': {{ resource_config.vm_name }},
+                 'disk_size': ''
+
+                  }' 
+               
+               }}"
             # return_content: yes
             status_code: 201
           # register: result
