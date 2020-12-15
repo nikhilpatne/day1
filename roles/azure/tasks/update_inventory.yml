@@ -45,7 +45,7 @@
             body_format: json
             body:
                name: "{{ azure_ipaddress.stdout_lines[0] }}"
-               description: "{{ resource_config.vm_name, facts.ansible_facts.azure_vm.properties.storageProfile.osDisk.diskSizeGB }}"
+               description: " {{ resource_config.vm_name }} , {{ facts.ansible_facts.azure_vm.properties.storageProfile.osDisk.diskSizeGB }} "
             # return_content: yes
             status_code: 201
           # register: result
