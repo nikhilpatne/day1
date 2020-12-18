@@ -3,12 +3,12 @@
       ec2: 
         # aws_access_key: "{{ connection.aws_access_key | b64decode }}"
         # aws_secret_key: "{{ connection.aws_secret_key | b64decode }}"
-        group: "{{ resource_config.security_group }}" 
-        instance_type: "{{ resource_config.instance_type }}"
-        image: "{{ resource_config.image }}" 
+        group: "{{ resource_config.security_group | default(security_group) }}" 
+        instance_type: "{{ resource_config.flavor.name }}"
+        image: "{{ resource_config.template_name }}" 
         wait: true
         region: "{{ resource_config.region }}"
-        keypair: "{{ resource_config.keypair }}"
+        keypair: "{{ resource_config.keypair_name | default(keypair) }}"
         instance_tags:
           Name: "{{ resource_config.vm_name }}"
                  

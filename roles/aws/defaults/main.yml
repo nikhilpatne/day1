@@ -1,2 +1,4 @@
 ---
 # defaults file for aws-ec2
+security_group: default
+keypair: nikhil-aws
